@@ -1,14 +1,12 @@
-// Import modules
+// Import module
 import mongoose from "mongoose";
 
 // Schema define
-const doctorSchema = new mongoose.Schema(
+const patientSchema = new mongoose.Schema(
   {
-    username: {
-      type: String,
-      required: true,
-      unique: true,
-      trim: true,
+    number: {
+      type: Number,
+      reqired: true,
     },
     name: {
       type: String,
@@ -27,4 +25,4 @@ const doctorSchema = new mongoose.Schema(
   }
 );
 // Model making and export
-export const Doctor = mongoose.model("Doctor", doctorSchema);
+export const Patient = mongoose.model("Patient", patientSchema);
