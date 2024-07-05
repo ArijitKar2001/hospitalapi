@@ -1,1 +1,1 @@
-toString
+console.log(decodedData);
