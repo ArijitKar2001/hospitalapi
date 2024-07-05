@@ -2,6 +2,7 @@ import cookieParser from "cookie-parser";
 import express from "express";
 import cors from "cors";
 import { registerRoutes } from "./routes/register.routes.js";
+import connectDB from "./configs/dbconnection.js";
 
 // Initialized app using express
 const app = express();
@@ -14,6 +15,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
 
+// Connect database
+connectDB();
 // Routes
 app.use("/api/register", registerRoutes);
 app.use("/", (req, res) => {
