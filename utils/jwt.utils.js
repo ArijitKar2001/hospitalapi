@@ -16,7 +16,7 @@ export const generateToken = (data) => {
   } catch (error) {
     return {
       success: false,
-      message: "Something went wront in token genarate",
+      message: "Something went wrong while generating token",
       data: {
         token: null,
         error: error,
@@ -41,7 +41,7 @@ export const verifyToken = (token) => {
   } catch (error) {
     return {
       success: false,
-      message: "Verification unsuccessful",
+      message: "Verification unsuccessfull",
       data: {
         decoded: null,
         error: error,

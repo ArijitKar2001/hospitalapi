@@ -17,6 +17,7 @@ app.use(cors());
 
 // Connect database
 connectDB();
+
 // Routes
 app.use("/api/register", registerRoutes);
 app.use("/", (req, res) => {

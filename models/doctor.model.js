@@ -15,6 +15,10 @@ const doctorSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
+    password: {
+      type: String,
+      required: true,
+    },
     reports: [
       {
         type: mongoose.Schema.Types.ObjectId,
@@ -27,4 +31,5 @@ const doctorSchema = new mongoose.Schema(
   }
 );
 // Model making and export
-export const Doctor = mongoose.model("Doctor", doctorSchema);
+const Doctor = mongoose.model("Doctor", doctorSchema);
+export default Doctor;
