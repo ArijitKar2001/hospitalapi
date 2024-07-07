@@ -33,6 +33,7 @@ app.use("/", (req, res) => {
       "Doctor Login [POST]": "/api/doctor/login",
     },
     Report: {
+      "Create report of a specific patient" : "/api/patient/:id/create_report",
       "Get all reports of a patient [GET]": "/api/patient/:id/all_reports",
       "Get all reports by status [GET}": "/api/reports/:status",
     },
