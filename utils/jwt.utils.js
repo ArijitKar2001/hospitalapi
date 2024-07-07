@@ -29,7 +29,6 @@ export const generateToken = (data) => {
 export const verifyToken = (token) => {
   try {
     const decoded = jwt.verify(token, "xr56ewui8");
-    console.log(decoded);
     return {
       success: true,
       message: "Verification successfull",

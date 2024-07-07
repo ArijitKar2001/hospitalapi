@@ -1,8 +1,10 @@
-import cookieParser from "cookie-parser";
+// Import module
 import express from "express";
 import cors from "cors";
-import { registerRoutes } from "./routes/register.routes.js";
 import connectDB from "./configs/dbconnection.js";
+import doctorRoutes from "./routes/doctor.routes.js";
+import patientRoutes from "./routes/patient.routes.js";
+import reportRoutes from "./routes/report.routes.js";
 
 // Initialized app using express
 const app = express();
@@ -12,22 +14,27 @@ const PORT = 3000;
 
 // Middlewares
 app.use(express.json());
-app.use(cookieParser());
 app.use(cors());
 
 // Connect database
 connectDB();
 
 // Routes
-app.use("/api/register", registerRoutes);
+app.use("/api/doctor", doctorRoutes);
+app.use("/api/patient", patientRoutes);
+app.use("/api/reports", reportRoutes);
 app.use("/", (req, res) => {
-  res.json({
+  res.status(200).json({
     Registration: {
-      "Doctor Registration [POST]": "/api/register/doctor",
-      "Patient Registration [POST]": "/api/register/patient",
+      "Doctor Registration [POST]": "/api/doctor/register",
+      "Patient Registration [POST]": "/api/patient/register",
     },
     Login: {
-      "Doctor Login [GET]": "/api/login/doctor/:id",
+      "Doctor Login [POST]": "/api/doctor/login",
+    },
+    Report: {
+      "Get all reports of a patient [GET]": "/api/patient/:id/all_reports",
+      "Get all reports by status [GET}": "/api/reports/:status",
     },
   });
 });

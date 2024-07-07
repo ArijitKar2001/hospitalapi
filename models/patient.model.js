@@ -5,8 +5,10 @@ import mongoose from "mongoose";
 const patientSchema = new mongoose.Schema(
   {
     number: {
-      type: Number,
+      type: String,
       reqired: true,
+      trim: true,
+      unique: true,
     },
     name: {
       type: String,
