@@ -58,8 +58,8 @@ hospitalapi/
 - `GET /api/patient/:id/all_reports` - Get all the reports of a specific patient
 
 ### Doctors
-- `POST /api/doctor/register` - Add a new doctor
-- `POST /api/doctor/login` - Login doctor
+- `POST /api/doctor/register` - Doctor's registration
+- `POST /api/doctor/login` - Doctor's login
 
 ### Reports
 - `GET /api/reports/:status` - Get all the reports based on status
