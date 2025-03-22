@@ -55,7 +55,7 @@ npm install
 Setup your MongoDB connection string in configs/dbconnection.js.
 Start the application:
 ```
-npm start
+npm run dev
 ```
 📜 License
 This project is licensed under the MIT License. See the LICENSE file for more information.
