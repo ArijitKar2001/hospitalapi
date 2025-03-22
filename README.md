@@ -57,14 +57,12 @@ Start the application:
 ```
 npm run dev
 ```
-## 📜 License
-This project is licensed under the MIT License. See the LICENSE file for more information.
 
 ## 🙏 Acknowledgements
-Express
-MongoDB
-Mongoose
-jsonwebtoken
+- Express
+- MongoDB
+- Mongoose
+- jsonwebtoken
 bcrypt
 ## 👥 Contributors
 Arijit Karmakar
