@@ -31,7 +31,7 @@ project-root/
 │   └── password.utils.js
 └── index.js
 ```
-✨ Features
+## ✨ Features
 👨‍⚕️ Doctor Registration & Login
 📝 Patient Registration
 📄 Creating & Retrieving Reports
@@ -57,14 +57,14 @@ Start the application:
 ```
 npm run dev
 ```
-📜 License
+## 📜 License
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
-🙏 Acknowledgements
+## 🙏 Acknowledgements
 Express
 MongoDB
 Mongoose
 jsonwebtoken
 bcrypt
-👥 Contributors
+## 👥 Contributors
 Arijit Karmakar
