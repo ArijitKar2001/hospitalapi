@@ -1,73 +1,70 @@
+# 🏥 Hospital Management System
 
-# Hospital API
+## 📌 Overview
+The **Hospital Management System** is a web application designed to streamline patient registration and doctor management. It facilitates doctors to register, log in, and access reports, while patients can register and create health reports. This system aims to enhance the efficiency of hospital operations, ensuring seamless communication between medical staff and patients.
 
-This project is an API for managing hospital data, built using Node.js and Express.
+## 🛠️ Tech Stack
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow) ![Node.js](https://img.shields.io/badge/Node.js-v14.17.4-green) ![Express](https://img.shields.io/badge/Express-4.17.1-blue) ![MongoDB](https://img.shields.io/badge/MongoDB-v5.0.3-5EB148) ![Mongoose](https://img.shields.io/badge/Mongoose-v5.10.9-4D8C9E) ![JWT](https://img.shields.io/badge/JWT-v8.5.1-8C2B5B) ![Bcrypt](https://img.shields.io/badge/Bcrypt-v5.0.1-FFCA28)
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ArijitKar2001/hospitalapi.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd hospitalapi
-   ```
-3. Install the dependencies:
-   ```bash
-   npm install
-   ```
-
-## Usage
-
-1. Start the server:
-   ```bash
-   node index.js
-   ```
-2. The server will be running on `http://localhost:3000`.
-
-## Project Structure
-
+## 📁 Folder Structure
 ```
-hospitalapi/
-├── configs/        # Configuration files
-├── controllers/    # Route controllers
-├── middlewares/    # Custom middlewares
-├── models/         # Database models
-├── routes/         # API routes
-├── utils/          # Utility functions
-├── .gitignore      # Git ignore file
-├── index.js        # Main server file
-├── package-lock.json
-├── package.json
+project-root/
+├── configs/
+│   └── dbconnection.js
+├── controllers/
+│   ├── doctor.controllers.js
+│   ├── patient.controllers.js
+│   ├── report.controllers.js
+├── middlewares/
+│   ├── doctor.middlewares.js
+│   └── patient.middlewares.js
+├── models/
+│   ├── doctor.model.js
+│   ├── patient.model.js
+│   └── report.model.js
+├── routes/
+│   ├── doctor.routes.js
+│   ├── patient.routes.js
+│   └── report.routes.js
+├── utils/
+│   ├── jwt.utils.js
+│   └── password.utils.js
+└── index.js
 ```
+✨ Features
+👨‍⚕️ Doctor Registration & Login
+📝 Patient Registration
+📄 Creating & Retrieving Reports
+🔒 Secure Token-based Authentication
+📊 Status Filtering of Reports
+🚀 Installation
+To set up the project locally, follow these steps:
 
-## API Endpoints
+Clone the repository:
+```
+git clone https://github.com/yourusername/hospital-management-system.git
+```
+Navigate to the project directory:
+```
+cd hospital-management-system
+```
+Install the necessary dependencies:
+```
+npm install
+```
+Setup your MongoDB connection string in configs/dbconnection.js.
+Start the application:
+```
+npm start
+```
+📜 License
+This project is licensed under the MIT License. See the LICENSE file for more information.
 
-### Patients
-- `POST /api/patient/register` - Add a new patient
-- `POST /api/patient/:id/create_report` - Create a report of a specific patient
-- `GET /api/patient/:id/all_reports` - Get all the reports of a specific patient
-
-### Doctors
-- `POST /api/doctor/register` - Doctor's registration
-- `POST /api/doctor/login` - Doctor's login
-
-### Reports
-- `GET /api/reports/:status` - Get all the reports based on status
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/awesome-feature`)
-3. Commit your changes (`git commit -m 'Add some awesome feature'`)
-4. Push to the branch (`git push origin feature/awesome-feature`)
-5. Open a pull request
+🙏 Acknowledgements
+Express
+MongoDB
+Mongoose
+jsonwebtoken
+bcrypt
+👥 Contributors
+Arijit Karmakar
